@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <!-- form element sluzi na vytvaranie formulara v HTML forme a je prisposobeny na imput uzivatela 
+            je to tiez aj container napr. na text, checkbox, tlacidla atd. -->
+            <!-- TEXT INPUT -->
+            <center>
+            <form>
+                <label for="fname1">Prihlasovacie meno</label><br>
+                <input type="text" 
+                id="fname1" 
+                name="fname1"
+                autofocus=""
+                autocapitalize="none"
+                autocomplete="fname1"
+                required=""><br>
+                <label for="pass1">Password</label><br>
+                <input type="password" 
+                       id="pass1" 
+                       name="pass1"
+                       autocomplete="current-password"
+                       required="">
+            
+                <img src="png-transparent-eye-computer-icon-vector-focus-concept-looking-at-view-optometry-eyeball-symbol-human-eye-ideas.png"
+                    width="20px"
+                    height="20px"
+                    style=
+                        "display: inline; 
+                        margin-left: -1.5%; 
+                                                vertical-align: middle"
+                                            id="togglePassword">
+                                       <br /><br />       
+                                    <button type="submit">
+                                        Login
+                                    </button></form></center>
+                                    <script>
+                                        const togglePassword =
+                                              document.querySelector('#togglePassword');
+                                 
+                                        const password = 
+                                              document.querySelector('#pass1');
+                                 
+                                        togglePassword.
+                                        addEventListener('click', function (e) {
+                                 
+                                            // Toggle the type attribute 
+                                            const type = password.getAttribute(
+                                                'type') === 'password' ? 'text' : 'password';
+                                            password.setAttribute('type', type);
+                                 
+                                            // Toggle the eye slash icon 
+                                            if (togglePassword.src.match(
+                                "eye cross.png")) {
+                                                togglePassword.src =
+                                "png-transparent-eye-computer-icon-vector-focus-concept-looking-at-view-optometry-eyeball-symbol-human-eye-ideas.png";
+                                            } else {
+                                                togglePassword.src =
+                                "eye cross.png";
+                                            }
+                                        }); 
+                                    </script>     
+                <p>Vyber si najoblubenejsi dopravny prostriedok : </p><br>
+                <form>
+                    <input type="radio" id="car" name="naj.prostriedok" value="Auto">
+                    <label for="car">Auto</label><br>
+                    <input type="radio" id="MHD" name="naj.prostriedok" value="MHD">
+                    <label for="MHD">MHD</label><br>
+                    <input type="radio" id="bike" name="naj.prostriedok" value="Bicykel">
+                    <label for="Bike">Bicykel</label><br>
+                </form>
+                <p>Zaskrtni si svoj oblubeny checkbox</p>
+                <input type="checkbox" id="check1" name="check1" value="Red">
+                    <label style="color: red;" for="check1">Red</label><br>
+                    <input type="checkbox" id="check2" name="check2" value="Green">
+                    <label style="color: green;" for="check2">Green</label><br>
+                    <input type="checkbox" id="check3" name="check3" value="Blue">
+                    <label style="color: blue;" for="Blue">Blue</label><br>
+        </body>
+    </head>
+</html>
